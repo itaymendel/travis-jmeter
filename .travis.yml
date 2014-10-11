@@ -1,16 +1,14 @@
 language: ruby
 rvm:
-  - 2.0.0-p247
-
+- 2.0.0-p247
 env:
   global:
-    - secure: loadosophia-access-key
-
+  - secure: loadosophia-access-key
   matrix:
-    - "LOAD_TEST=true"
-
+  - LOAD_TEST=true
 script:
-  - "script/ci"
-
+- script/ci
 before_install:
-  - "gem install bundler"
+- openssl aes-256-cbc -K $encrypted_e9deb73389c2_key -iv $encrypted_e9deb73389c2_iv
+  -in .loadosophia.token.enc -out .loadosophia.token -d
+- gem install bundler
