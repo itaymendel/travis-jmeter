@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.0.0-p247
+
+env:
+  global:
+    - secure: loadosophia-access-key
+
+  matrix:
+    - "LOAD_TEST=true"
+
+script:
+  - "script/ci"
+
+before_install:
+  - "gem install bundler"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ["$LOAD_TEST" == "true"]; then
+  # run the app
+  sleep 1
+  script/loadosophia.sh
+else
+  echo "No loadtest"
+fi
