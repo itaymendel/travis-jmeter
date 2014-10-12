@@ -1,9 +1,10 @@
+require "bundler/setup"
 require 'rubygems'
 require 'ruby-jmeter'
 
 test do
   threads count: 10, continue_forever: true, duration: 3 do
-    visit name: 'Hello World', url: 'http://locahost/hi'
+    visit name: 'Hello World', url: 'http://locahost:4567/hi'
   end
 end.run(
   path: 'jmeter/apache-jmeter-2.11/bin/',
