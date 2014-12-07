@@ -3,10 +3,9 @@ rvm:
 - 2.0.0-p247
 env:
   global:
-  - BLAZEMETER_TEST_ID=4712984
+  - BLAZEMETER_TEST_ID=4712984 LOAD_TEST=true
   - secure: loadosophia-access-key
   matrix:
-  - LOAD_TEST=true
   - secure: ITWOwqqTacYOOpPH38/7BvLu8//vzcddHH3dL3fwNpfdgUP+Ip3+/MCq1YIHz+ShnZzMEVx+f6T+sO9a3KVRLpPCOoUYyMkcR5cz/P5ymNImlBjzhC/u0sdP5OpDTUmWsO1pj4Z6KThAJVspxVjQMa8KHGIEFb+HBR4ACTG18q8=
 script:
 - script/ci
