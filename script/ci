@@ -4,6 +4,8 @@ if [ "$LOAD_TEST" == "true" ]; then
   script/server &
   sleep 3
   script/loadosophia.sh
+  # after deploy do
+  script/blazemeter.sh
 else
   echo "No loadtest"
 fi
