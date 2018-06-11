@@ -1,4 +1,4 @@
 source 'http://rubygems.org'
 
-gem 'sinatra'
-gem 'ruby-jmeter'
+gem 'sinatra', '>= 2.0.2'
+gem 'ruby-jmeter', '>= 2.11.22'
